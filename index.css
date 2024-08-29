@@ -1,0 +1,25 @@
+
+#paragraph{
+        color:rgb(8, 79, 90);
+    }
+    #paragraph:hover{
+        color:red;
+    }
+#pop{
+    color: blueviolet;
+}
+.lack{
+    font-weight: bolder;
+}
+body{
+    background-image: url("COSMICBACKGROUND.jpg");
+    background-size: cover;
+    background-position: center ;
+    font-family: "Ubuntu";
+        
+      
+    
+}
+.textBorder{
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, -2px 2px 0 #000000, 2px -2px 0 #000000;
+}

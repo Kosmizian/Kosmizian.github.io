@@ -1,28 +1,42 @@
-<!-- CSS -->
-<style>
-    #paragraph{
-        color:rgb(8, 79, 90);
-    }
-    #paragraph:hover{
-        color:red;
-    }
-</style>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>Kozmic Citizen</title><!-- CSS -->
+    <link href="index.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+    
+        * {
+            font-family: "Chakra Petch";
+        }
+    </style>
+</head>
+
+<!-- success - dark green
+danger - red
+info - light blue
+light - white
+dark - darkish grey
+primary - blue
+warning - dark yellow -->
 
 
 <!-- HTML -->
 <body>
-    <button onclick="firstFunction()">wd</button>
-    <p id="paragraph">sasfjhjg</p>
-    <h1>sadfsdsfd</h1>
-    <h6>sadfsadf</h6>
-
-    <textarea></textarea>
+    <p class="display-1 text-center fw-bold">Kosmic Citizen</p>
+    
+    <div class ="container-fluid bg-light py-3 text-center border border-dark border-4 " style="width: 300px;">
+        <p class="display-6 text-warning fw-bold textBorder" >BoX Battle</p>
+    <button class="btn btn-danger border-dark border-5 " onclick="window.open('/BBattle/testgame.html')">Play Game</button>
+    </div>
+    
 </body>
 
 
 <!-- JS -->
 <script>
     function firstFunction(){
-        alert("sl;diuytrksj");
+        
     }
 </script>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/bootstrap.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+    
+    html,body{
+        font-family: "Chakra Petch";
+        margin: 0;
+        height: 100;
+        position: fixed;
+        overflow: hidden;
+    }
+</style>
+<script src="/phaser.js"></script>
+<script src="titleScreen.js"></script>
+<body>
+
+
+</body>
+
+<script>
+    var config={
+        width:window.innerWidth,
+        height:window.innerHeight,
+        fps: {
+            target:60,
+            forceSetTimeOut: true,
+        },
+        backgroundColor:0x000000,
+        scene: [
+            titleScreen, 
+        ],
+        pixelArt: true,
+        physics:{
+            default:"arcade",
+            arcade:{
+                debug: true,
+
+            },
+        },
+    }
+    var game= new Phaser.Game(
+        config
+    );
+    var move = {
+        up: false,
+        down: false,
+        left: false,
+        right: false,
+
+    }
+    var playerdata = {
+        speed:300,
+    }
+
+    if(window.location.hostname=="127.0.0.1"){
+        playerdata.speed = 1000;
+    }
+
+
+    window.addEventListener("keydown", function(event){
+        console.log(event.code);
+        if(event.code == "ArrowUp"){
+            move.up=true;
+        }
+        if(event.code == "ArrowDown"){
+            move.down=true;
+        }
+        if(event.code == "ArrowLeft"){
+            move.left=true;
+        }
+        if(event.code == "ArrowRight"){
+            move.right=true;
+        }
+    });
+
+    window.addEventListener("keyup", function(event){
+        console.log(event.code);
+        if(event.code == "ArrowUp"){
+            move.up= false;
+        }
+        if(event.code == "ArrowDown"){
+            move.down=false;
+        }
+        if(event.code == "ArrowLeft"){
+            move.left=false;
+        }
+        if(event.code == "ArrowRight"){
+            move.right=false;
+        }
+    });
+    
+</script>
+</html>
